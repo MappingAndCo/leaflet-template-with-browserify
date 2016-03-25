@@ -7,9 +7,6 @@
     // require leaflet module
     var L = require('leaflet');
 
-    // Indicate leaflet the specific location of the images folder that it needs to render the page
-    L.Icon.Default.imagePath = 'node_modules/leaflet/dist/images/';
-
     // Create the map
     var map = L.map('map').setView([41.3921, 2.1705], 13);
     
