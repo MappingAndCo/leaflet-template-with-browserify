@@ -15,7 +15,7 @@ $ cd leaflet-template-with-browserify
 $ npm install
 ```
 
-That will install [browserify](https://github.com/substack/node-browserify), [watchify](https://github.com/substack/watchify), [ESlint](https://www.npmjs.com/package/eslint), [leaflet](https://www.npmjs.com/package/leaflet) and [jQuery](https://www.npmjs.com/package/jquery) modules.
+This will install [browserify](https://github.com/substack/node-browserify), [watchify](https://github.com/substack/watchify), [ESlint](https://www.npmjs.com/package/eslint), [leaflet](https://www.npmjs.com/package/leaflet) and [jQuery](https://www.npmjs.com/package/jquery) modules.
 
 
 ## Usage
@@ -39,7 +39,7 @@ That means that everytime you do a change on the code you need to do `$ npm run 
 
 This template has also one more tool called [ESlint](http://eslint.org/) that will help you when writing Javascript code. 
 
-To check your JS just do `$ npm run lint` to test **app.js** file, you also can do it directly with: `$ "eslint app.js`. ESlint use one configuration file called **.eslintrc** with the rules that you want to apply to your project. Be free to update mine to your necessities by adding your own rules. For example, the quotes rule `[2, "single"]` means that Eslint will print as a error double quotes.
+To check your JS just do `$ npm run lint` to test **app.js** file, you also can do it directly with: `$ eslint app.js`. ESlint use one configuration file called **.eslintrc** with the rules that you want to apply to your project. Be free to update mine to your necessities by adding your own rules. For example, the quotes rule `[2, "single"]` means that Eslint will print as a error double quotes.
 
 
 ```javascript
@@ -58,7 +58,7 @@ To check your JS just do `$ npm run lint` to test **app.js** file, you also can 
 
 Let's add the **Leaflet library** to our `app.js` with a require(). You can use relative paths like `./foo.js` for you're own modules.
 
-In case you didnt notice Leaflet is also a [node module](https://www.npmjs.com/package/leaflet) that can be installed with `$ npm install leaflet --save`. This project has it already installed so we just need to call the leaflet module on our code:
+In case you didn't notice Leaflet is also a [node module](https://www.npmjs.com/package/leaflet) that can be installed with `$ npm install leaflet --save`. This project has it already installed so we just need to call the leaflet module on our code:
 
 ```javascript
 // require leaflet module
@@ -82,20 +82,20 @@ L.tileLayer(osmTiles, {
 }).addTo(map);
 ```
 
-This template also includes some basic example with adding a geojson file. We will use the JQuery module
+This template also includes some basic example adding a geojson file. We will use the JQuery module here:
 
 ```javascript
 // require jquery module
 var $ = require('jquery')
 ```
 
-Get geojson data using an AJAX request with the getJSON method: 
+Get geojson data using an AJAX request with the **getJSON** method: 
 
 ```javascript
 // some geojson URL
-var myURL = 'http://mappingandco.github.io/geojsonDB/barcelona/neighbourhoods.geojson'
+var geojsonURL = 'http://mappingandco.github.io/geojsonDB/barcelona/neighbourhoods.geojson'
 
-$.getJSON(myURL, function(neighbourhoods) {
+$.getJSON(geojsonURL, function(neighbourhoods) {
     L.geoJson(neighbourhoods, {
         onEachFeature: function (feature, layer) {
             layer.bindPopup(feature.properties.NBarri);
