@@ -3,11 +3,11 @@
 A template utility for webmaps that provides a skeletal project using leaflet and browserify
 
 
-## Dependencies
+## Getting Started
 
-You need to have [node](https://nodejs.org/en/) and npm installed
+Requires [node](https://nodejs.org/en/) and npm installed
 
-## Install via:
+Clone repo and install node modules:
 
 ```
 $ git clone https://github.com/sigon426/leaflet-template-with-browserify.git
@@ -15,7 +15,7 @@ $ cd leaflet-template-with-browserify
 $ npm install
 ```
 
-This will install [browserify](https://github.com/substack/node-browserify), [watchify](https://github.com/substack/watchify), [ESlint](https://www.npmjs.com/package/eslint), [leaflet](https://www.npmjs.com/package/leaflet) and [jQuery](https://www.npmjs.com/package/jquery) modules.
+This will install [Browserify](https://github.com/substack/node-browserify), [Watchify](https://github.com/substack/watchify), [ESlint](https://www.npmjs.com/package/eslint), [Leaflet](https://www.npmjs.com/package/leaflet) and [jQuery](https://www.npmjs.com/package/jquery) modules.
 
 
 ## Usage
@@ -37,7 +37,7 @@ That means that everytime you do a change on the code you need to do `$ npm run 
 
 ## Detect JavaScript Problems
 
-This template has also one more tool called [ESlint](http://eslint.org/) that will help you when writing Javascript code. 
+This template has also one more tool called [ESlint](http://eslint.org/) that will help you when writing Javascript code. You need to install it globally `$ npm install -g eslint`.
 
 To check your JS just do `$ npm run lint` to test **app.js** file, you also can do it directly with: `$ eslint app.js`. ESlint use one configuration file called **.eslintrc** with the rules that you want to apply to your project. Be free to update mine to your necessities by adding your own rules. For example, the quotes rule `[2, "single"]` means that Eslint will print as a error double quotes.
 
