@@ -7,7 +7,6 @@ A template utility for webmaps that provides a skeletal project using leaflet an
 
 You need to have [node](https://nodejs.org/en/) and npm installed
 
-
 ## Install via:
 
 ```
@@ -16,7 +15,7 @@ $ cd leaflet-template-with-browserify
 $ npm install
 ```
 
-That will install [browserify](https://github.com/substack/node-browserify), [watchify](https://github.com/substack/watchify), [ESlint](https://www.npmjs.com/package/eslint), [leaflet](https://www.npmjs.com/package/leaflet) and [jquery](https://www.npmjs.com/package/jquery)
+That will install [browserify](https://github.com/substack/node-browserify), [watchify](https://github.com/substack/watchify), [ESlint](https://www.npmjs.com/package/eslint), [leaflet](https://www.npmjs.com/package/leaflet) and [jQuery](https://www.npmjs.com/package/jquery) modules.
 
 
 ## Usage
@@ -104,3 +103,8 @@ $.getJSON(myURL, function(neighbourhoods) {
     }).addTo(map);
 });
 ```
+
+## Source
+
+https://github.com/sigon426/leaflet-template-with-browserify/tree/master
+
