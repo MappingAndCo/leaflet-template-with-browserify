@@ -1,0 +1,7 @@
+body, html { margin:0; padding:0; height:100%;}
+#map {
+    height:100%;
+}
+.map-title{
+    position: absolute; top: 0; right: 10px; border: 0; z-index: 1;
+}
