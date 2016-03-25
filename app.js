@@ -6,7 +6,6 @@
     // require leaflet module
     var L = require('leaflet');
 
-
     // Create the map
     var map = L.map('map').setView([41.3921, 2.1705], 13);
     
