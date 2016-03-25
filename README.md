@@ -5,20 +5,23 @@ A template utility for webmaps that provides a skeletal project using leaflet an
 
 ## Dependencies
 
-* node and npm
+You need to have [node](https://nodejs.org/en/) and npm installed
+
 
 ## Install via:
 
 ```
+$ git clone https://github.com/sigon426/leaflet-template-with-browserify.git
+$ cd leaflet-template-with-browserify
 $ npm install
 ```
 
-That will install [browserify](https://github.com/substack/node-browserify), [watchify](https://github.com/substack/watchify), [ESlint](https://www.npmjs.com/package/eslint), leaflet and jquery
+That will install [browserify](https://github.com/substack/node-browserify), [watchify](https://github.com/substack/watchify), [ESlint](https://www.npmjs.com/package/eslint), [leaflet](https://www.npmjs.com/package/leaflet) and [jquery](https://www.npmjs.com/package/jquery)
 
 
 ## Usage
 
-If we take a look at the **package.json** we'll see that there is 3 scripts:
+If we take a look at the **package.json** we'll see that there are three scripts:
 
 
 ```javascript
@@ -31,13 +34,13 @@ If we take a look at the **package.json** we'll see that there is 3 scripts:
 
 This means that when we run `$ npm run build` on the terminal, browserify will take everything that is required on **app.js** and write it out to a new file called **bundle.js**. That file is the only js file that we need to include on the **index.html**, forget about importing all the libraries one by one to get leaflet.js, jQuery, lodash ... all will be bundle in just one file.
 
-That means that everytime you do a change on the code you need to do `$ npm run build`, BUT, to avoid that we use [watchify](https://github.com/substack/watchify). You just run `$ npm run watch`, and every time you save the bundle will automaticaly be compiled.
+That means that everytime you do a change on the code you need to do `$ npm run build`, to avoid that we use [watchify](https://github.com/substack/watchify). You just type `$ npm run watch`, and every time you do a save the bundle will automaticaly be compiled.
 
 ## Detect JavaScript Problems
 
-This template has also one more tool called ESlint that will help you when writing Javascript code. 
+This template has also one more tool called [ESlint](http://eslint.org/) that will help you when writing Javascript code. 
 
-To check you JS just run `$ npm run lint` to test **app.js** file, you also can do it directly with: `$ "eslint app.js`. ESlint use one configuration file called **.eslintrc** with the rules that you want to apply to your project. Be free to update mine to your necessities. For example the quotes rule `[2, "single"]` means that will lint as a error double quotes.
+To check your JS just do `$ npm run lint` to test **app.js** file, you also can do it directly with: `$ "eslint app.js`. ESlint use one configuration file called **.eslintrc** with the rules that you want to apply to your project. Be free to update mine to your necessities by adding your own rules. For example, the quotes rule `[2, "single"]` means that Eslint will print as a error double quotes.
 
 
 ```javascript
@@ -54,9 +57,9 @@ To check you JS just run `$ npm run lint` to test **app.js** file, you also can 
 
 ## Example
 
-Let's add leaflet to our app.js with a require(). You can use relative paths like './foo.js' for you're own modules.
+Let's add the **Leaflet library** to our `app.js` with a require(). You can use relative paths like `./foo.js` for you're own modules.
 
-In case you didnt notice Leaflet is also a [node module](https://www.npmjs.com/package/leaflet) that can be installed with `$ npm install leaflet --save`. This project has already it installed so we just need to call the leaflet module on our code:
+In case you didnt notice Leaflet is also a [node module](https://www.npmjs.com/package/leaflet) that can be installed with `$ npm install leaflet --save`. This project has it already installed so we just need to call the leaflet module on our code:
 
 ```javascript
 // require leaflet module
