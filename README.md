@@ -15,7 +15,7 @@ $ cd leaflet-template-with-browserify
 $ npm install
 ```
 
-That will install [browserify](https://github.com/substack/node-browserify), [watchify](https://github.com/substack/watchify), [ESlint](https://www.npmjs.com/package/eslint), [leaflet](https://www.npmjs.com/package/leaflet) and [jQuery](https://www.npmjs.com/package/jquery)
+That will install [browserify](https://github.com/substack/node-browserify), [watchify](https://github.com/substack/watchify), [ESlint](https://www.npmjs.com/package/eslint), [leaflet](https://www.npmjs.com/package/leaflet) and [jQuery](https://www.npmjs.com/package/jquery) modules.
 
 
 ## Usage
