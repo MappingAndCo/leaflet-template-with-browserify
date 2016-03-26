@@ -31,9 +31,13 @@ If we take a look at the **package.json** we'll see that there are three scripts
 }
 ```
 
-This means that when we run `$ npm run build` on the terminal, browserify will take everything that is required on **app.js** and write it out to a new file called **bundle.js**. That file is the only js file that we need to include on the **index.html**, forget about importing all the libraries one by one to get leaflet.js, jQuery, lodash ... all will be bundle in just one file.
+This means that when we run `$ npm run build` on the terminal, browserify will take everything that is required on **app.js** and write it out to a new file called **bundle.js**. That file is the only js file that we need to include on the **index.html**, forget about importing all the libraries one by one to get leaflet.js, jQuery, lodash ... each file is concatenated into a single javascript file.
 
-That means that everytime you do a change on the code you need to do `$ npm run build`, to avoid that we use [watchify](https://github.com/substack/watchify). You just type `$ npm run watch`, and every time you do a save the bundle will automaticaly be compiled.
+The bundle.js you generate is completely self-contained and has everything the application needs to work with a pretty negligible overhead.
+
+This means that everytime you do a change on the code you need to do `$ npm run build`, to avoid that we use [watchify](https://github.com/substack/watchify). You just type `$ npm run watch`, and every time you do a save the bundle will automaticaly be compiled.
+
+Take a look at [browserify handbook](https://github.com/substack/browserify-handbook)
 
 ## Detect JavaScript Problems
 
@@ -74,7 +78,7 @@ var map = L.map('map').setView([41.3921, 2.1705], 13);
 // Use OpenStreetMap tiles and attribution
 var osmTiles = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 var attribution = '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
- 
+
 // Create the basemap and add it to the map
 L.tileLayer(osmTiles, {
     maxZoom: 18,
@@ -89,7 +93,7 @@ This template also includes some basic example adding a geojson file. We will us
 var $ = require('jquery')
 ```
 
-Get geojson data using an AJAX request with the **getJSON** method: 
+Get geojson data using an AJAX request with the **getJSON** method:
 
 ```javascript
 // some geojson URL
@@ -107,4 +111,3 @@ $.getJSON(geojsonURL, function(neighbourhoods) {
 ## Source
 
 https://github.com/sigon426/leaflet-template-with-browserify/tree/master
-
