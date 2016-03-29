@@ -4,6 +4,7 @@
     var $ = require('jquery');
     var L = require('leaflet');
     var Hash = require('leaflet-hash');
+    var bcnmarker = require('./my_modules/markers');
 
     // Indicate leaflet the specific location of the images folder that it needs to render the page
     L.Icon.Default.imagePath = 'lib/leaflet/images/';
@@ -24,9 +25,7 @@
     var hash = new L.Hash(map);
 
     // Add a marker
-    L.marker([41.3921, 2.1705]).addTo(map)
-        .bindPopup('Barcelona.<br> Come to visit :)')
-        .openPopup();
+    bcnmarker.addTo(map).openPopup();
 
     // Add some geojson
     var geojsonURL = 'http://mappingandco.github.io/geojsonDB/barcelona/neighbourhoods.geojson';

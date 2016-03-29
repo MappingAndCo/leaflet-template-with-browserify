@@ -5,6 +5,7 @@
     var $ = require('jquery');
     var L = require('leaflet');
     var Hash = require('leaflet-hash');
+    var bcnmarker = require('./my_modules/markers');
 
     // Indicate leaflet the specific location of the images folder that it needs to render the page
     L.Icon.Default.imagePath = 'lib/leaflet/images/';
@@ -25,9 +26,7 @@
     var hash = new L.Hash(map);
 
     // Add a marker
-    L.marker([41.3921, 2.1705]).addTo(map)
-        .bindPopup('Barcelona.<br> Come to visit :)')
-        .openPopup();
+    bcnmarker.addTo(map).openPopup();
 
     // Add some geojson
     var geojsonURL = 'http://mappingandco.github.io/geojsonDB/barcelona/neighbourhoods.geojson';
@@ -50,7 +49,14 @@
 
 }());
 
-},{"jquery":2,"leaflet":4,"leaflet-hash":3}],2:[function(require,module,exports){
+},{"./my_modules/markers":2,"jquery":3,"leaflet":5,"leaflet-hash":4}],2:[function(require,module,exports){
+var L = require('leaflet');
+
+var bcnMarker = L.marker([41.3921, 2.1705]).bindPopup('Barcelona.<br> Come to visit me :)');
+
+module.exports = bcnMarker;
+
+},{"leaflet":5}],3:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.2.2
  * http://jquery.com/
@@ -9894,7 +9900,7 @@ if ( !noGlobal ) {
 return jQuery;
 }));
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 (function(window) {
 	var HAS_HASHCHANGE = (function() {
 		var doc_mode = window.documentMode;
@@ -10058,7 +10064,7 @@ return jQuery;
 	};
 })(window);
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 /*
  Leaflet, a JavaScript library for mobile-friendly interactive maps. http://leafletjs.com
  (c) 2010-2013, Vladimir Agafonkin
