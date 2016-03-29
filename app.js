@@ -1,31 +1,31 @@
 (function () {
    'use strict';
-    // require jquery module
+    // require modules
     var $ = require('jquery');
-    
-    // require leaflet module
     var L = require('leaflet');
+    var Hash = require('leaflet-hash');
+    var bcnmarker = require('./my_modules/markers');
 
     // Indicate leaflet the specific location of the images folder that it needs to render the page
     L.Icon.Default.imagePath = 'lib/leaflet/images/';
 
     // Create the map
     var map = L.map('map').setView([41.3921, 2.1705], 13);
-    
+
     // Use OpenStreetMap tiles and attribution
     var osmTiles = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var attribution = '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors | <a href="https://github.com/sigon426">sigon</a>';
-     
+
     // Create the basemap and add it to the map
     L.tileLayer(osmTiles, {
         maxZoom: 18,
         attribution: attribution
     }).addTo(map);
 
+    var hash = new L.Hash(map);
+
     // Add a marker
-    L.marker([41.3921, 2.1705]).addTo(map)
-        .bindPopup('Barcelona.<br> Come to visit :)')
-        .openPopup();
+    bcnmarker.addTo(map).openPopup();
 
     // Add some geojson
     var geojsonURL = 'http://mappingandco.github.io/geojsonDB/barcelona/neighbourhoods.geojson';

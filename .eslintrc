@@ -39,7 +39,7 @@
         "no-underscore-dangle": 2,
         "no-unused-expressions": 2,
         "no-use-before-define": 2,
-        "no-with": 2,
+        "no-unused-vars": [2, { "varsIgnorePattern": "[hH]ash" }],
         "camelcase": 2,
         "comma-spacing": 2,
         "consistent-return": 2,
