@@ -1,36 +1,39 @@
 {
-    "name": "leaflet-template-with-browserify",
-    "version": "0.0.1",
-    "description": "Leaflet template with browserify",
-    "main": "app.js",
-    "scripts": {
-        "build": "browserify app.js -o bundle.js",
-        "watch": "watchify app.js -o bundle.js",
-        "lint": "eslint app.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/sigon426/leaflet-template-with-browserify.git"
-    },
-    "keywords": [
-        "eslint",
-        "leaflet",
-        "browserify",
-        "geojson"
-    ],
-    "author": "sigon (https://github.com/sigon426)",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/sigon426/leaflet-template-with-browserify/issues"
-    },
-    "homepage": "https://github.com/sigon426/leaflet-template-with-browserify#readme",
-    "devDependencies": {
-        "browserify": "^13.0.0",
-        "eslint": "^2.4.0",
-        "watchify": "^3.7.0"
-    },
-    "dependencies": {
-        "jquery": "^2.2.2",
-        "leaflet": "^0.7.7"
-    }
+  "name": "leaflet-template-with-browserify",
+  "version": "0.0.1",
+  "description": "Leaflet template with browserify",
+  "main": "app.js",
+  "scripts": {
+    "build": "browserify app.js -o bundle.js",
+    "watch": "watchify app.js -o bundle.js",
+    "lint": "eslint app.js",
+    "test": "tape --out test/compiled.js test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sigon426/leaflet-template-with-browserify.git"
+  },
+  "keywords": [
+    "eslint",
+    "leaflet",
+    "browserify",
+    "geojson"
+  ],
+  "author": "sigon (https://github.com/sigon426)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sigon426/leaflet-template-with-browserify/issues"
+  },
+  "homepage": "https://github.com/sigon426/leaflet-template-with-browserify#readme",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "eslint": "^2.4.0",
+    "tape": "^4.5.1",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "jquery": "^2.2.2",
+    "leaflet": "^0.7.7",
+    "leaflet-hash": "^0.2.1"
+  }
 }
