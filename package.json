@@ -1,6 +1,6 @@
 {
   "name": "leaflet-template-with-browserify",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Leaflet template with browserify",
   "main": "app.js",
   "scripts": {
