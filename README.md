@@ -20,14 +20,15 @@ This will install [Browserify](https://github.com/substack/node-browserify), [Wa
 
 ## Usage
 
-If we take a look at the **package.json** we'll see that there are three scripts:
+If we take a look at the **package.json** we'll see that there are four scripts:
 
 
 ```javascript
 "scripts": {
     "build": "browserify app.js -o bundle.js",
     "watch": "watchify app.js -o bundle.js",
-    "lint": "eslint app.js"
+    "lint": "eslint app.js",
+    "test": "tape test/*.js"
 }
 ```
 
@@ -39,7 +40,7 @@ This means that everytime you do a change on the code you need to do `$ npm run 
 
 Take a look at [browserify handbook](https://github.com/substack/browserify-handbook)
 
-## Detect JavaScript Problems
+## Detect JavaScript Syntax Problems
 
 This template has also one more tool called [ESlint](http://eslint.org/) that will help you when writing Javascript code. You need to install it globally `$ npm install -g eslint`.
 
@@ -57,6 +58,15 @@ To check your JS just do `$ npm run lint` to test **app.js** file, you also can 
 * "off" or 0 - turn the rule off
 * "warn" or 1 - turn the rule on as a warning (doesn't affect exit code)
 * "error" or 2 - turn the rule on as an error (exit code will be 1)
+
+## Add some test
+
+On this template we don't have very complicated modules to test, but when you start creating more and more modules to your app is esential to have some test. Here was added [tape](https://github.com/substack/tape) for doing the test part.
+
+```
+// type this to run the test on your ./test folder
+$ npm run test
+```
 
 ## Example
 
