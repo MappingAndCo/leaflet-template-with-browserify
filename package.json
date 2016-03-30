@@ -7,7 +7,7 @@
     "build": "browserify app.js -o bundle.js",
     "watch": "watchify app.js -o bundle.js",
     "lint": "eslint app.js",
-    "test": "tape --out test/compiled.js test/*.js"
+    "test": "tape test/*.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,10 @@
     "browserify",
     "geojson"
   ],
-  "author": "sigon (https://github.com/sigon426)",
+  "author": {
+    "name": "sigon",
+    "url": "https://github.com/sigon426"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sigon426/leaflet-template-with-browserify/issues"
