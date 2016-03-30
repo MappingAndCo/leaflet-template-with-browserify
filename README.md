@@ -118,6 +118,13 @@ $.getJSON(geojsonURL, function(neighbourhoods) {
 });
 ```
 
+Add [leaflet-hash](https://www.npmjs.com/package/leaflet-hash) plugin:
+
+```javascript
+require('leaflet-hash');
+var hash = new L.Hash(map);
+```
+
 ## Source
 
 https://github.com/sigon426/leaflet-template-with-browserify/tree/master
