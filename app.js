@@ -3,7 +3,8 @@
     // require modules
     var $ = require('jquery');
     var L = require('leaflet');
-    var Hash = require('leaflet-hash');
+    // var Hash = require('leaflet-hash');
+    require('leaflet-hash');
     var bcnmarker = require('./my_modules/markers');
 
     // Indicate leaflet the specific location of the images folder that it needs to render the page
