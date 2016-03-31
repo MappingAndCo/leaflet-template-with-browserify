@@ -127,4 +127,4 @@ var hash = new L.Hash(map);
 
 ## Source
 
-https://github.com/sigon426/leaflet-template-with-browserify/tree/master
+https://github.com/MappingAndCo/leaflet-template-with-browserify
