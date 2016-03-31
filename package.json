@@ -25,9 +25,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sigon426/leaflet-template-with-browserify/issues"
+    "url": "https://github.com/MappingAndCo/leaflet-template-with-browserify/issues"
   },
-  "homepage": "https://github.com/sigon426/leaflet-template-with-browserify#readme",
+  "homepage": "https://github.com/MappingAndCo/leaflet-template-with-browserify#readme",
   "devDependencies": {
     "browserify": "^13.0.0",
     "eslint": "^2.4.0",
